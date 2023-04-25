@@ -15,7 +15,6 @@ body, ul {
 #menu a:hover {
     background: rgba(0, 0, 0, 0,05);
     font-size: 15px;
-
 }
 #logo img {
     float: left;
@@ -23,7 +22,6 @@ body, ul {
     position: relative;
     top: 10px;
     left: 10px;
-
 }
 #header {
     width: 100%;
@@ -47,3 +45,4 @@ body, ul {
 #btn-mobile {
     display: none;
 }
+
