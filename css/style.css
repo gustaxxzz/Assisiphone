@@ -1,3 +1,4 @@
+@import url(https://fonts.google.com/specimen/Bebas+Neue);
 /* Arquivos responsavel pelos estilos */
 /* Aula 24/04/2023 - Estilos do Menu */
 
@@ -97,4 +98,45 @@ transition: 0.3s;
         background-color: #fff;
         padding: 4px 14px;
         font-size: 15px;
+    }
+    /* Fim css Estilo Banner */
+
+    /* Inicio css Destaque */
+
+    .destaque h2 {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .destaque p {
+        width: 77%;
+        text-align: center;
+        font-size: 14px;
+        margin: 30px auto;
+    }
+    .destaque figcaption {
+        font-size: 13px;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+    }
+    .destaque a {
+        justify-content: center;
+        display: flex;
+        text-decoration: none;
+        color: #000000;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 30px 0;
+    }
+    .destaque a:houver{
+        color: #ff0000;
+        font-size: 24px;
+        transition: 0.3s;
+        text-shadow: 4px 4px 6px #0000000a;
+    }
+    .destaque img {
+        height: 220px;
     }
