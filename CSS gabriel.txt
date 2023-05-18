@@ -1,0 +1,324 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit);
+/* Arquivos responsavel pelo estilos */
+/* Aula 24/04/2023 - Estilos do Menu */
+body,ul {
+    margin: 0px;
+    padding: 0px;
+}
+#menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Kanit';
+    font-size: 1.25em;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+#menu a:hover {
+    color: crimson;
+    font-size: 1.6em;
+    transition: 0.3s;
+    text-shadow: 4px 4px 4px #0000007a;
+}
+#logo img:hover{
+    box-shadow: 4px 4px 6px #0000007a;
+    transition: 0.3s;
+}
+#logo img {
+    float: left;
+    height: 55px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+#header {
+    width: 100%;
+    position: fixed;
+    z-index: 90;
+    box-sizing: border-box;
+    height: 75px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e7e7e7;
+}
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+#btn-mobile {
+    display: none;
+}
+#carouselExampleInterval {
+    position: relative;
+    z-index: 10;
+    padding-top: 75px;
+    width: 100%;
+}
+#carouseExampleInterval img {
+    height: 500px;
+    width: auto;
+}
+@media (max-width:600px){
+    #menu {
+        display: block;
+        position: absolute;
+        width: 15em;
+        top: 70px;
+        right: 0px;
+        background: #e7e7e7;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        padding-left: 5px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #menu li {
+        padding-top: 30px;
+        padding-bottom: 0px;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: hidden;
+    }
+    #btn-mobile {
+        display: flex;
+        padding: 00.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+    #hamburger {
+        border-top: 2px solid; /* melhorando hamburger >> espessura da linha */
+        width: 30px; /* alterando a largura do hamburger*/
+        color: #000000; /* alterando a cor do hamburger*/
+    }
+    #hamburger::after,
+    #hamburger::before {
+        content:'';
+        display: block;
+        width: 30px; /* alterando a largura do hamburger*/
+        height: 2px;
+        background: currentcolor;
+        margin-top: 4px; /* alterando o espçamento entre o hamburger */
+        position: relative;
+        border-top: 2px solid;/* melhorando hamburger >> espessura da linha */
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    
+}
+
+/* CSS estilos banner */
+.section-banner-home {
+    width: 100%;
+    height: 500px;
+    margin-top: 10px;
+    padding: 4px 4px;
+    background-color: #e7e7e7;
+}
+.section-banner-home img {
+    height: 400px;
+    width: auto; 
+    box-shadow: 4px 4px 6px #0000007a;
+}
+.section-banner-home .texto-banner {
+    margin-top: 30px;
+    font-size: 22px;
+    font-family: 'Kanit';
+}
+.section-banner-home .texto-banner h1 {
+    font-size: 30px;
+    width: 60%;
+    font-weight: 500;
+    padding-bottom: 20px;
+    font-family: 'Kanit';
+}
+.section-banner-home .texto-banner p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: 'Kanit';
+}
+.section-banner-home .texto-banner a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: #fff;
+    padding: 4px 14px;
+    font-size: 15px;
+}
+/*Fim css estilo Banner */
+
+/*inicio css destaques */
+
+.destaque h2 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Kanit';
+}
+    .destaque p {
+        width: 77%;
+        text-align: center;
+        font-size: 14px;
+        margin: 30px auto;
+        font-family: 'Kanit';
+    }
+    .destaque figcaption {
+        font-size: 13px;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Kanit';
+    }
+    .destaque a {
+        justify-content: center;
+        display: flex;
+        text-decoration: none;
+        color: #000000;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 30px 0;
+        font-family: 'Kanit';
+    }
+    .destaque a:hover {
+        color: #ff0000;
+        font-size: 20px;
+        transition: 0.3s;
+        text-shadow: 4px 4px 6px #0000007a;
+        font-family: 'Kanit';
+    }
+    .destaque img {
+        height: 220px;
+        font-family: 'Kanit';
+    }
+    /* /*fim css destaques */
+  
+    /* incio css novidades */
+
+    .novidades .text-body {
+        width: 80%;
+        margin: 70px auto;
+    }
+
+    .novidades h2 {
+        color: #000;
+    
+    }
+    .novidades p {
+        color: rgb(0, 0, 0);
+    }
+
+    .novidades a {
+        color: rgb(255, 255, 255);
+        text-decoration: underline;
+        text-decoration-color: rgb(0, 0, 0);
+        padding: 6px 12px;
+        background-color: rgb(184, 186, 190);
+        font-weight: 400;
+    }
+    /* Fim CSS novidades */
+    /* Inico CSS galeria */
+
+    .galeria {
+        margin: 60px auto 20px;
+        /* Quando tivermos 4 valores no margin = top / right / botton /left 
+        >   Ex: margin 60px 60px 60px 60px
+           Quando tivermos 3 valores = top / auto > right and left / 20px > left
+        >   Ex: margin: 60px 60px 60px
+           Quando tivermos 2 valores = top and botton / right and left
+        >   Ex: margin: 60px 30px   
+           Quando tivermos 1 valor = top and botton and right and left 
+        >   Ex: margin: 60px
+        >> Essa regra vale tambem para paddign. <<   */
+    }
+    .galeria .container {
+        margin-left: 15%;
+    }
+    
+    .galeria h2 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .galeria p {
+        text-align: center;
+        width: 50%;
+        margin: 14px auto 50px;
+        height: 200px;
+    }
+
+    .galeria .gallery {
+        width: 30%;
+        margin: 14px auto 50px;
+        height: 200px;
+    }
+    .galeria .gallery img {
+        width: auto;
+        -webkit-transition: -webkit-transform .5s ease;
+        transition: transform .5s ease;
+        height: auto;
+        display: block;
+    }
+     .galeria .gallery img:hover {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.3);
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* fim CSS galeria */
+    /* inicio CSS footer */
+
+.rodape {
+    padding: 50px 50px;
+}
+.rodape .container img {
+    height: 50%;
+    width: 50%;
+    padding-left: 5px;
+    transition: transform .2s;
+}
+.rodape .container img:hover {
+    transform: scale(1.5);
+
+}
+.rodape .info-contato p {
+        margin: 0;
+}
+.rodape a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px
+}
+.rodape a:hover {
+    font-weight: bold;
+}
+.rodape .redes-sociais {
+    display: inline-block;
+}
+.rodape .redes-sociais img {
+    width: 45px;
+    height: 40px;
+}
+.rodape p.direitos {
+    text-align: center;
+    margin-top: 40px;
+}
+    
