@@ -293,7 +293,8 @@ transition: 0.3s;
     height: 50%;
     width: 50%;
     padding-left: 10px;
-    transition: transform .2s;
+    transition: .3s;
+    display: block;
 }
 .rodape .container img:hover {
     transform: scale(1.5);
@@ -395,9 +396,9 @@ transition: 0.3s;
     padding-bottom: 9px;
     position: relative;
  }
- .text-local {
+ #text-local {
     border-bottom: 1px solid #fcab0e;
-    margin-top: 9px;
+    margin-bottom: 9px;
     position: relative;
  }
  .text-left span {
@@ -482,23 +483,31 @@ transition: 0.3s;
     height: 60px;
 }
 
-.whatsapp .pulando {
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    animation: pulando .4s cubic-bezier(.53, -0.03, .67, 1.06);
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}        
-@keyframes pulando {
+.whatsapp .pulse {
+    animation: 0.7s infinite;
+    margin: 0 auto;
+    display: table;
+    margin-top: 50px;
+    animation-direction: top;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+@-webkit-keyframes pulse {
+     0% {
+        -webkit-transform:scale(1);
+        -webkit-filter:brightness(120%);
+        }
+ }
+ @keyframes pulse {
     0% {
-        transform: translateY(0px);
+        transform: scale(1);
+        filter: brightness(100%);
     }
     100% {
-        transform: translateY(100%);
-        width: 70px;
-        height: 40px;
+        transform: scale(1.1);
+        filter: brightness(100%);
     }
+ }   
 
 
 
