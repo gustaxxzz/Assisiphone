@@ -44,7 +44,7 @@ transition: 0.3s;
     align-items: center;
     justify-content: space-between;
     background: #e7e7e7;
-
+    box-shadow: 6px 6px 6px #0000007a;
 }
 #menu {
     display: flex;
@@ -67,11 +67,13 @@ transition: 0.3s;
 #carouselExampleInterval {
     position: relative;
     z-index: 10;
-    padding-top: 80px;
-    margin-left: 8px;
-    margin-right: 8px;
+    padding-top: 0;
+    margin-left: 0;
+    margin-right: 0;
     box-shadow: 6px 6px 6px #0000007a;
     transition: 0.3s;
+    width: 100%;
+    display: inline-flex;
 }
 #carouselExampleInterval img {
     height: 550px;
@@ -289,11 +291,11 @@ transition: 0.3s;
 .rodape {
     padding: 50px 50px 0;
 }
-.rodape .container img {
+.rodape .container #img-logo {
     height: 50%;
     width: 50%;
     padding-left: 10px;
-    transition: .3s;
+    transition: transform .3s;
     display: block;
 }
 .rodape .container img:hover {
@@ -316,6 +318,15 @@ transition: 0.3s;
 .rodape .redes-sociais img {
     width: 45px;
     height: 40px;
+    padding-left: 0;
+    margin-left: 0.7rem;
+    transition: transform .3s;
+    border-radius: 25px; /* Arredondando div do objeto redes sociais */
+}
+.rodape .redes-sociais img:hover {
+    z-index: 1;
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.446);
 }
 .rodape p.direitos {
     text-align: center;
